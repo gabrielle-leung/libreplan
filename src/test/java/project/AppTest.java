@@ -9,6 +9,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
 
 import project.Outils.Debug;
 
@@ -45,6 +46,20 @@ public class AppTest {
     {
         assertTrue( true );
     }
+
+    @Test
+    public void CAL_01(){
+        PageLogin pl = PageFactory.initElements(driver, PageLogin.class);
+        PageAccueil pa = pl.seConnecter(driver, "log", "mdp");
+        assert (pa.aCalendrier());
+        PageCalendrier pc = pa.selectionnerRessources_Calendrier(driver);
+        
+
+
+        
+
+    }
+
 
     /*Fin de chaque test de cette class
     * Attends 5 secondes
