@@ -16,7 +16,7 @@ import project.Outils.Debug;
 /**
  * Unit test for simple App.
  */
-public class AppTest {
+public class GRE {
 
     public static WebDriver driver;
 
@@ -50,11 +50,7 @@ public class AppTest {
     @Test
     public void CAL_01(){
         PageLogin pl = PageFactory.initElements(driver, PageLogin.class);
-        PageAccueil pa = pl.seConnecter(driver, "log", "mdp");
-        assert (pa.aCalendrier());
-        PageCalendrier pc = pa.selectionnerRessources_Calendrier(driver);
-        
-
+        assert(pa.aCout());
 
         
 
