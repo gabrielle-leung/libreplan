@@ -29,7 +29,7 @@ public class AppTest {
         driver = new FirefoxDriver();       
     }
     
-    /* Debut de chaque test de cette classe
+    /* Debut de chaque test de cette class
     * Ouvrir le lien cible du test
     */
     @Before
@@ -46,11 +46,18 @@ public class AppTest {
         assertTrue( true );
     }
 
+    /*Fin de chaque test de cette class
+    * Attends 5 secondes
+    */
+
     @After
     public void end(){
         Debug.w4it(5000);
     }
 
+    /* Fin de tout test de cette classe
+    * Ferme le webdriver
+    */   
     @AfterClass
     public static void down(){
         driver.quit();
