@@ -8,19 +8,19 @@ import org.openqa.selenium.support.PageFactory;
 public class PageLogin extends Page{
 
     @FindBy(xpath="//input[@name='j_username']")
-    private WebElement f_username;
+    private WebElement c_nomUtilisateur;
     
-    private void setChampsUser(String name){
-        f_username.clear();
-        f_username.sendKeys(name);
+    private void setChampsUser(String nom){
+        c_nomUtilisateur.clear();
+        c_nomUtilisateur.sendKeys(nom);
     }
     
     @FindBy(xpath="//input[@name='j_username']")
-    private WebElement f_password;
+    private WebElement c_mdp;
     
-    private void setChampsPasswd(String passwd){
-        f_password.clear();
-        f_password.sendKeys(passwd);
+    private void setChampsPasswd(String mdp){
+        c_mdp.clear();
+        c_mdp.sendKeys(mdp);
     }
 
     @FindBy(xpath = "//input[@id='button']")
