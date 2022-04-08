@@ -15,7 +15,14 @@ public class Debug {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
 
+    /*****
+     * 
+     * FONCTION à venirprint
+     * */
+    public static void print(String msg){
+        System.out.println(msg);
     }
     
 }
