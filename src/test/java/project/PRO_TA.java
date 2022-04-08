@@ -48,12 +48,19 @@ public class PRO_TA {
     }
 
     @Test
-    public void CAL_01(){
-        PageLogin pl = PageFactory.initElements(driver, PageLogin.class);   
-
-
+    public void PRO_TA_01(){
+        PageLogin pl = PageFactory.initElements(driver, PageLogin.class);
+        PageAccueil pa = pl.seConnecter(driver, "log", "mdp");
+        assert (pa.aCalendrier());
+        PageProjet pp = pa.clickCreerProjet(driver);
     }
 
+    @Test
+    public void PRO_TA_04(){
+        PageLogin pl = PageFactory.initElements(driver, PageLogin.class);
+        PageAccueil pa = pl.seConnecter(driver, "log", "mdp");
+        assert (pa.aCalendrier());
+    }
 
     /*Fin de chaque test de cette class
     * Attends 5 secondes
